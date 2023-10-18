@@ -8,7 +8,9 @@ export class UserMapper extends Mapper<UserModel, User> {
             email: param.email,
             name: param.name,
             phone: param.phone,
-            userName: param.userName
+            userName: param.userName,
+            password: param.passowrd,
+            confirmPassword: param.passowrd
         }
     }
     override toJson(param: User): UserModel {
@@ -16,7 +18,8 @@ export class UserMapper extends Mapper<UserModel, User> {
             email: param.email,
             name: param.name,
             phone: param.phone,
-            userName: param.userName
+            userName: param.userName,
+            passowrd: param.password
         }
     }
 

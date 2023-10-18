@@ -3,4 +3,6 @@ export interface User {
     name: string;
     userName: string;
     phone: string;
+    password: string;
+    confirmPassword: string;
 }

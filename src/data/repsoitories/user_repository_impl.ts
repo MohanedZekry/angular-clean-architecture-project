@@ -10,6 +10,7 @@ import { UserModel } from "../models/user_model";
     providedIn: 'root',
 })
 export class UserRepositoryImpl extends UserRepository {
+    
     userMapper = new UserMapper();
 
     constructor(private http: HttpClient) {
@@ -20,12 +21,14 @@ export class UserRepositoryImpl extends UserRepository {
         return this.http
             .get<UserModel>('URL', { params })
             .pipe(map(this.userMapper.fromJson));
-
     }
     override addNewUser(params: { user: User; }): Observable<boolean> {
         throw new Error("Method not implemented.");
     }
     override getAllUsers(): Observable<User[]> {
+        throw new Error("Method not implemented.");
+    }
+    override forgetPassword(params: { email: string; }): Observable<boolean> {
         throw new Error("Method not implemented.");
     }
 }

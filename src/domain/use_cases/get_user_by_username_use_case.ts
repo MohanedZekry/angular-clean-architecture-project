@@ -8,7 +8,7 @@ export class GetUserByUserNameUseCase implements BaseUseCase<User, { username: s
 
     execute(param: { username: string; }): Observable<User> {
         return this.userRepository
-        .getUserByUserName(param);
+            .getUserByUserName(param);
     }
 
 }
